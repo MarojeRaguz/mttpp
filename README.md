@@ -35,14 +35,14 @@ C:\Users\Korisnik\AppData\Local\Android\Sdk\platform-tools> adb start-server
 ## Pokretanje Appium aplikacije
 
 ### Podešavanje ANDROID_HOME i JAVA_HOME varijable
-[alt text](https://github.com/MarojeRaguz/mttpp/blob/main/src/resources/images/environmentVariables.png)
+![alt text](https://github.com/MarojeRaguz/mttpp/blob/main/src/resources/images/environmentVariables.png)
 
 ### Odaberite New Session Window
-[alt text](https://github.com/MarojeRaguz/mttpp/blob/main/src/resources/images/newSessionWindow.png)
+![alt text](https://github.com/MarojeRaguz/mttpp/blob/main/src/resources/images/newSessionWindow.png)
 
 ### Unesite željene sposobnosti mobilnog uređaja i zapičnite sesiju
 
-[alt text](https://github.com/MarojeRaguz/mttpp/blob/main/src/resources/images/serverProperties.png)
+![alt text](https://github.com/MarojeRaguz/mttpp/blob/main/src/resources/images/serverProperties.png)
 
 
 
