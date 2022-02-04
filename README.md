@@ -3,7 +3,7 @@
 
 U ovom projektu testirat će se android aplikacija [notepad](https://apkpure.com/notepad/com.splendapps.adler) kroz 8 testnih slučajeva.
 
-##Popis alata potrebnih za izvođenje:
+## Popis alata potrebnih za izvođenje:
 
 - [Android SDK(Android Studio)](https://developer.android.com/studio)
 - [JDK (Java Development Kit)](https://www.guru99.com/install-java.html)
@@ -14,24 +14,25 @@ U ovom projektu testirat će se android aplikacija [notepad](https://apkpure.com
 - [Appium 1.18.3](https://github.com/appium/appium-desktop/releases/tag/v1.18.3)
 
 
-##Pokretanje emulatora i instalacija [notepad](https://apkpure.com/notepad/com.splendapps.adler) aplikacije
+## Pokretanje emulatora i instalacija [notepad](https://apkpure.com/notepad/com.splendapps.adler) aplikacije
 
 Za testiranje se koristio Nexus 5X API 28
 
-###Pokretanje emulatora iz komandne linije
+### Pokretanje emulatora iz komandne linije
+
 ```bash
 C:\Users\Korisnik\AppData\Local\Android\Sdk\emulator> emulator -avd Nexus_5X_API_28
 ```
-###Pokretanje testne aplikacije na emulatoru
+### Pokretanje testne aplikacije na emulatoru
 ```bash
 C:\Users\Korisnik\AppData\Local\Android\Sdk\emulator> adb -s emulator-5554 install <putanja do aplikacije>\Notepad_v2.12_apkpure.com.apk
 ```
-###Pokretanje ADB poslužitelja 
+### Pokretanje ADB poslužitelja 
 ```bash
 C:\Users\Korisnik\AppData\Local\Android\Sdk\platform-tools> adb start-server
 ```
 
-##Pokretanje Appium aplikacije
+## Pokretanje Appium aplikacije
 
 
 
