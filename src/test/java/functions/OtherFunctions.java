@@ -19,17 +19,13 @@ public class OtherFunctions {
         MobileElement addToFavouriteEl = (MobileElement)this.driver.findElement(By.id("com.splendapps.adler:id/ivNoteFavourite"));
         addToFavouriteEl.click();
         MobileElement submitNoteEl = (MobileElement)this.driver.findElement(By.id("com.splendapps.adler:id/ivSaveAndExit"));
-
         submitNoteEl.click();
         MobileElement sideOptionsEl = (MobileElement)this.driver.findElement(By.xpath("//android.widget.ImageButton[@content-desc=\"Open drawer\"]"));
-
         sideOptionsEl.click();
         MobileElement displayFavouritesEl = (MobileElement)this.driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.ListView/android.widget.LinearLayout[2]\n"));
-
         displayFavouritesEl.click();
         selectNoteEl.click();
         MobileElement textNoteInputEl = (MobileElement)this.driver.findElement(By.id("com.splendapps.adler:id/etNoteNote"));
-
         String noteText = textNoteInputEl.getText();
         submitNoteEl.click();
         Thread.sleep(2000L);
@@ -60,5 +56,51 @@ public class OtherFunctions {
         backClickEl.click();
 
         return noteText;
+    }
+
+    public String addInspirationTag() throws Exception{
+        MobileElement selectNoteEl = (MobileElement)this.driver.findElement(By.id("com.splendapps.adler:id/tvGridElementNote"));
+        selectNoteEl.click();
+        MobileElement addTagEl =  (MobileElement) this.driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"Tags\"]\n"));
+        addTagEl.click();
+        MobileElement selectInspirationTagEl = (MobileElement) this.driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.LinearLayout[1]/android.widget.CheckBox\n"));
+        selectInspirationTagEl.click();
+        MobileElement confirmTagEl = (MobileElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button\n"));
+        confirmTagEl.click();
+        MobileElement submitNoteEl = (MobileElement)this.driver.findElement(By.id("com.splendapps.adler:id/ivSaveAndExit"));
+        submitNoteEl.click();
+        MobileElement sideOptionsEl = (MobileElement)this.driver.findElement(By.xpath("//android.widget.ImageButton[@content-desc=\"Open drawer\"]"));
+        sideOptionsEl.click();
+        MobileElement displayInspirationTagEl = (MobileElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.ListView/android.widget.LinearLayout[5]\n"));
+        displayInspirationTagEl.click();
+        selectNoteEl.click();
+        MobileElement textNoteInputEl = (MobileElement)this.driver.findElement(By.id("com.splendapps.adler:id/etNoteNote"));
+        String noteText = textNoteInputEl.getText();
+        submitNoteEl.click();
+        Thread.sleep(2000L);
+        sideOptionsEl.click();
+        MobileElement allNotesEl = (MobileElement)this.driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.ListView/android.widget.LinearLayout[1]\n"));
+        allNotesEl.click();
+
+        return noteText;
+
+    }
+
+    public String sortNotes() throws InterruptedException {
+        MobileElement sortNotesEl = (MobileElement) this.driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"Sort notes\"]\n"));
+        sortNotesEl.click();
+        MobileElement sortAlphabetically = (MobileElement) this.driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RadioGroup/android.widget.RadioButton[4]\n"));
+        sortAlphabetically.click();
+        MobileElement sortAscending = (MobileElement) this.driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]\n"));
+        sortAscending.click();
+        MobileElement selectNoteEl = (MobileElement)this.driver.findElement(By.id("com.splendapps.adler:id/tvGridElementNote"));
+        selectNoteEl.click();
+        MobileElement textNoteInputEl = (MobileElement)this.driver.findElement(By.id("com.splendapps.adler:id/etNoteNote"));
+        String noteText = textNoteInputEl.getText();
+        MobileElement submitNoteEl = (MobileElement)this.driver.findElement(By.id("com.splendapps.adler:id/ivSaveAndExit"));
+        submitNoteEl.click();
+        Thread.sleep(2000L);
+        return noteText;
+
     }
 }

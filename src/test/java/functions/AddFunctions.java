@@ -4,10 +4,6 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.SourceDataLine;
-
 public class AddFunctions {
 
     AndroidDriver driver;
@@ -18,11 +14,7 @@ public class AddFunctions {
 
     }
 
-    AudioInputStream audioInputStream;
-    AudioFormat audioFormat;
-    SourceDataLine sourceDataLine;
-    static String audiFilePath="src\\resources\\this_is_speech_note.wav";
-    int BUFFER_SIZE = 128000;
+
 
     public String addImageNote(String note) throws InterruptedException  {
         MobileElement addNoteEl = (MobileElement) this.driver.findElement(By.id("com.splendapps.adler:id/ivSpectreLauncher"));
@@ -78,48 +70,3 @@ public class AddFunctions {
         submitNoteEl.click();
     }
 }
-
-/*
-    public void addVoiceNote() throws Exception{
-        MobileElement addNoteEl= (MobileElement)
-                driver.findElement(By.id("com.splendapps.adler:id/ivSpectreLauncher"));
-        addNoteEl.click();
-        MobileElement VoiceToTextEl= (MobileElement)
-                driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.ImageView"));
-        VoiceToTextEl.click();
-        Thread.sleep(2000);
-
-
-        audioInputStream= AudioSystem.getAudioInputStream(new File(audiFilePath).getAbsoluteFile());
-        audioFormat=audioInputStream.getFormat();
-        DataLine.Info info = new DataLine.Info(SourceDataLine.class,audioFormat);
-
-        sourceDataLine = (SourceDataLine) AudioSystem.getLine(info);
-        sourceDataLine.open(audioFormat);
-
-
-        sourceDataLine.start();
-        int nBytesRead = 0;
-        byte[] abData = new byte[BUFFER_SIZE];
-        while (nBytesRead != -1) {
-            try {
-                nBytesRead = audioInputStream.read(abData, 0, abData.length);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            if (nBytesRead >= 0) {
-                @SuppressWarnings("unused")
-                int nBytesWritten = sourceDataLine.write(abData, 0, nBytesRead);
-            }
-        }
-        sourceDataLine.drain();
-        sourceDataLine.close();
-
-        /*clip=AudioSystem.getClip();
-        clip.open(audioInputStream);
-        clip.start();
-
-        Thread.sleep(5000);
-
-
-    }*/

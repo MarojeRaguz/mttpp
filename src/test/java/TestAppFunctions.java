@@ -3,7 +3,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
-
 import functions.AddFunctions;
 import functions.DeleteFunctions;
 import functions.OtherFunctions;
@@ -14,7 +13,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import javax.sound.sampled.*;
+
 
 public class TestAppFunctions {
     AndroidDriver driver;
@@ -92,6 +91,27 @@ public class TestAppFunctions {
         Assert.assertEquals(expectedNoteText,actualNoteText);
         Thread.sleep(5000);
     }
+
+    @Test
+    public void addInspirationTag() throws Exception{
+        String expectedNoteText = addFunctions.addClassicNote("adding tags");
+        String actualNoteText = otherFunctions.addInspirationTag();
+        Assert.assertEquals(expectedNoteText,actualNoteText);
+        Thread.sleep(5000);
+    }
+    @Test
+    public void sortNotes() throws Exception{
+        ArrayList<String> inputList = new ArrayList<>(Arrays.asList("aaaa","bbbb","cccc","dddd"));
+        for (int i=0; i<inputList.size();i++){
+            addFunctions.addClassicNote(inputList.get(i));
+        }
+        String expectedNoteText = inputList.get(0);
+        String actualNoteText = otherFunctions.sortNotes();
+        Assert.assertEquals(expectedNoteText,actualNoteText);
+        Thread.sleep(5000);
+
+    }
+
 
     @AfterClass
     public void teardown(){
