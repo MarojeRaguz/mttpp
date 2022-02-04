@@ -123,9 +123,7 @@ public class TestAppFunctions {
 }
 
 /*{
-        "app": "C:\\Users\\maroj\\Downloads\\Notepad_v2.12_apkpure.com.apk",
-        "platformName": "Android",
-        "deviceName": "emulator"
+
         }*/
 
 
