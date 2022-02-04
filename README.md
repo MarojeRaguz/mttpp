@@ -44,29 +44,33 @@ C:\Users\Korisnik\AppData\Local\Android\Sdk\platform-tools> adb start-server
 
 ![alt text](https://github.com/MarojeRaguz/mttpp/blob/main/src/resources/images/serverProperties.png)
 
+## Testni slučajevi
+
+- [search](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
+  - testiranje funkcije pretraživanja bilježaka
+- [addClassicNote](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
+  - testiranje funkcije za dodavanje nove tekstualne bilješke
+- [addImagenote](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
+  - testiranje funkcije za dodavanje nove tekstualne bilješke
+- [addInspirationTag](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
+  - testiranje funkcije za dodavanje oznake
+- [addToFavourites](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
+  - testiranje funkcije za dodavanje bilješki u favorite
+- [deleteNote](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
+  - testiranje funkcije za brisanje bilješki kroz izbornik
+- [deleteNoteHold](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
+  - testiranje funkcije za brisanje bilješki pomoću označavanja bilješke držanjem, te odabirom opcije obriši
+- [sortNotes](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
+  - testiranje funkcije za abecedno sortiranje bilježaka
+
+##Pokretanje testova i generiranje izvještaja
+
+###Pokretanje iz komandne linije
+```bash
+> mvn test (Ctrl + Enter)
+```
 
 
 
-### Test cases
-Before each test case, method [setupTests()](https://github.com/mislavkostic/MTTPP_projekt/blob/c20cba0dbb06a457a8ae9a2224b192f5c54ef26d/src/main/java/SeleniumTests.java#L16) is run, setting up [ChromeDriver](https://chromedriver.chromium.org/) in which the tests are run
 
-- [googleResultTest()](https://github.com/mislavkostic/MTTPP_projekt/blob/c20cba0dbb06a457a8ae9a2224b192f5c54ef26d/src/main/java/SeleniumTests.java#L26)
-    - tests if Google search returns a link to the [OpenCart](https://demo.opencart.com/)
 
-- [homepageTest()](https://github.com/mislavkostic/MTTPP_projekt/blob/c20cba0dbb06a457a8ae9a2224b192f5c54ef26d/src/main/java/SeleniumTests.java#L38)
-    - **WebDriver** navigates to [OpenCart's homepage](https://demo.opencart.com/) and tests if the page loaded
-
-- [registerTest()](https://github.com/mislavkostic/MTTPP_projekt/blob/c20cba0dbb06a457a8ae9a2224b192f5c54ef26d/src/main/java/SeleniumTests.java#L49)
-    - tests register function using randomized credentials
-    - credentials are being [randomized](https://github.com/mislavkostic/MTTPP_projekt/blob/c20cba0dbb06a457a8ae9a2224b192f5c54ef26d/src/main/java/EmailGenerator.java#L16) for each test run
-    - each test run stores newly created credentials in a [data class](https://github.com/mislavkostic/MTTPP_projekt/blob/master/src/main/java/Persona.java) for further use in other test cases
-    - if **WebDriver** successfully logs out of the newly created account, test passes, otherwise it fails <u>(*logging out is impossible if the  account creation failed*)</u>
-
-- [loginTest()](https://github.com/mislavkostic/MTTPP_projekt/blob/c20cba0dbb06a457a8ae9a2224b192f5c54ef26d/src/main/java/SeleniumTests.java#L73)
-    - **WebDriver** navigates to **Login** button and enters stored credentials from [data class](https://github.com/mislavkostic/MTTPP_projekt/blob/master/src/main/java/Persona.java) and tests whether it logged in or not
-
-- [addToCartTest()](https://github.com/mislavkostic/MTTPP_projekt/blob/c20cba0dbb06a457a8ae9a2224b192f5c54ef26d/src/main/java/SeleniumTests.java#L91)
-    - **WebDriver** navigates through the shop menu and tries to add *iMac* to **cart**
-    - if added item is inside the cart, the test passes.
-
-After each test case, method [teardownTest()](https://github.com/mislavkostic/MTTPP_projekt/blob/c20cba0dbb06a457a8ae9a2224b192f5c54ef26d/src/main/java/SeleniumTests.java#L114) is run, shutting down [ChromeDriver](https://chromedriver.chromium.org/)
