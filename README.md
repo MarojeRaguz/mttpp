@@ -25,7 +25,7 @@ C:\Users\Korisnik\AppData\Local\Android\Sdk\emulator> emulator -avd Nexus_5X_API
 ```
 ### Pokretanje testne aplikacije na emulatoru
 ```bash
-C:\Users\Korisnik\AppData\Local\Android\Sdk\emulator> adb -s emulator-5554 install <putanja do aplikacije>\Notepad_v2.12_apkpure.com.apk
+C:\Users\Korisnik\AppData\Local\Android\Sdk\emulator> adb -s emulator-5554 install <putanja_do_aplikacije>\Notepad_v2.12_apkpure.com.apk
 ```
 ### Pokretanje ADB poslužitelja 
 ```bash
@@ -34,8 +34,15 @@ C:\Users\Korisnik\AppData\Local\Android\Sdk\platform-tools> adb start-server
 
 ## Pokretanje Appium aplikacije
 
+### Podešavanje ANDROID_HOME i JAVA_HOME varijable
+[alt text](https://github.com/MarojeRaguz/mttpp/blob/main/src/resources/images/environmentVariables.png)
 
+### Odaberite New Session Window
+[alt text](https://github.com/MarojeRaguz/mttpp/blob/main/src/resources/images/newSessionWindow.png)
 
+### Unesite željene sposobnosti mobilnog uređaja i zapičnite sesiju
+
+[alt text](https://github.com/MarojeRaguz/mttpp/blob/main/src/resources/images/serverProperties.png)
 
 
 
