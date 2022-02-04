@@ -63,9 +63,9 @@ C:\Users\Korisnik\AppData\Local\Android\Sdk\platform-tools> adb start-server
 - [sortNotes](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
   - testiranje funkcije za abecedno sortiranje bilježaka
 
-##Pokretanje testova i generiranje izvještaja
+## Pokretanje testova i generiranje izvještaja
 
-###Pokretanje iz komandne linije
+### Pokretanje iz komandne linije
 ```bash
 > mvn test (Ctrl + Enter)
 ```
