@@ -55,11 +55,11 @@ C:\Users\Korisnik\AppData\Local\Android\Sdk\platform-tools> adb start-server
 - [addInspirationTag](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
   - testiranje funkcije za dodavanje oznake
 - [addToFavourites](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
-  - testiranje funkcije za dodavanje bilješki u favorite
+  - testiranje funkcije za dodavanje bilješke u favorite
 - [deleteNote](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
-  - testiranje funkcije za brisanje bilješki kroz izbornik
+  - testiranje funkcije za brisanje bilješke kroz izbornik
 - [deleteNoteHold](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
-  - testiranje funkcije za brisanje bilješki pomoću označavanja bilješke držanjem, te odabirom opcije obriši
+  - testiranje funkcije za brisanje bilješke pomoću označavanja bilješke držanjem, te odabirom opcije obriši
 - [sortNotes](https://github.com/MarojeRaguz/mttpp/blob/main/src/test/java/TestAppFunctions.java)
   - testiranje funkcije za abecedno sortiranje bilježaka
 
